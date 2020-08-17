@@ -2,6 +2,7 @@ Script can be used to randomly generate 2 NxN matrices. User may prompt to then 
 
 Command Line options are used to interact with the user
 
+```
   --dimensions1 DIMENSIONS1
                         Tuple of dimensions for the matrices
   --dimensions2 DIMENSIONS2
@@ -16,13 +17,14 @@ Command Line options are used to interact with the user
                         Persistent Matrix binary file name
   --matrix_binary_file MATRIX_BINARY_FILE
                         If this option is passed, all matrices generated will come from the passed binary file
-
+```
 
 Typical uses look like such 
 
 Case 1. Generate a brand new set of two matrices, multiply them together, calculate the cumulative product, generate statistics, and then save the matrices to a human readable csv, as well as generate a binary file so that they may be loaded again at a future date.
 
-./ibm_challenge.py --dimensions1 3,3 --dimensions2 3,3 --cumulative_product 0 --outdir `pwd` --stat_file_name statistics_1 --matrix_persist_name matrix_gen_1 --multiply 
+```./matrix_challenge.py --dimensions1 3,3 --dimensions2 3,3 --cumulative_product 0 --outdir `pwd` --stat_file_name statistics_1 --matrix_persist_name matrix_gen_1 --multiply ```
 
 Case 2. Regenerate a statistics file loading in matrices from a previously saved numpy binary file.
-./ibm_challenge.py --matrix_binary_file $full_file_location/$file.npz --outdir `pwd` --stat_file_name statistics_loaded_1
+
+```./matrix_challenge.py --matrix_binary_file $full_file_location/$file.npz --outdir `pwd` --stat_file_name statistics_loaded_1```
